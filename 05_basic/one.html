@@ -8,33 +8,50 @@
 </head>
 
 <body style="background-color: #212121; color: #fff;">
-
+    <ul class = "language">
+        <li>Javascript</li>
+    </ul>
 </body>
 <script>
-    const div = document.createElement("div")
-    console.log(div)
-    div.className = "parent"
-    div.id = "ID"
-    div.style.backgroundColor = "pink"
-    div.style.color = "red"
-    div.style.padding = "15px"
-    const addText = document.createTextNode("Chai or code")
-    div.appendChild(addText)
-    document.body.appendChild(div)
+    // const div = document.createElement("div")
+    // console.log(div)
+    // div.className = "parent"
+    // div.id = "ID"
+    // div.style.backgroundColor = "pink"
+    // div.style.color = "red"
+    // div.style.padding = "15px"
+    // const addText = document.createTextNode("Chai or code")
+    // div.appendChild(addText)
+    // document.body.appendChild(div)
 
-    const div2 = document.createElement("div")
-    console.log(div2)
-    div2.className = "WeekName"
-    div2.id = "Day"
-    div2.style.backgroundColor = "blue"
-    div2.style.color = "#fff"
-    div2.style.marginTop = "10px"
-    div2.style.padding = "15px"
-    const addTEXT2 = document.createTextNode("Monday")
-    div2.appendChild(addTEXT2)
-    document.body.appendChild(div2)
+    // const div2 = document.createElement("div")
+    // console.log(div2)
+    // div2.className = "WeekName"
+    // div2.id = "Day"
+    // div2.style.backgroundColor = "blue"
+    // div2.style.color = "#fff"
+    // div2.style.marginTop = "10px"
+    // div2.style.padding = "15px"
+    // const addTEXT2 = document.createTextNode("Monday")
+    // div2.appendChild(addTEXT2)
+    // document.body.appendChild(div2)
+function printLI(LangName) {
+    const li = document.createElement("li")
+li.appendChild(document.createTextNode(LangName))
+document.querySelector(".language").appendChild(li)
+}
+printLI("python")
+printLI("java")
 
+//EDITING
+const newli = document.querySelector("li:nth-child(3)")
+const newLang = document.createElement('li')
+newLang.textContent = "mojo"
+newli.replaceWith(newLang)
 
+//remove
+const lastlang = document.querySelector("li:last-child")
+lastlang.remove()
 </script>
 
 </html>
